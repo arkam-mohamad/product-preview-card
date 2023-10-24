@@ -1,131 +1,94 @@
 *{
   margin: 0;
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 body{
-  background-color: hsla(241, 72%, 46%, 0)
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
 }
 main{
-  max-width: 800px;
-  height: 400px;
-  border-radius: 25px;
-  margin: 200px auto;
+  height: 450px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-.section{
-  width: 300px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 25px;
-}
-.blue{
-  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-  gap: 20px;
-}
-.blue h3{
-  color: hsl(241, 100%, 89%);
-  font-weight: 700;
-}
-.score{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.score h1{
-  color: hsl(0, 0%, 100%);
-  font-size: 48px;
-}
-.score p{
-  color: hsl(241, 100%, 89%);
-  font-size: 14px;
-}
-.blue h2{
-  color: hsl(0, 0%, 100%);
-  font-weight: 700;
-}
-.blue .complement{
-  color: hsl(221, 100%, 96%);
-  font-size: 14px;
-  width: 65%;
-}
-
-.white{
-  gap: 10px;
-  align-items: start;
-  padding-left: 30px;
-  box-shadow: 5px 5px 5px 5px hsl(221, 100%, 96%);
-  border-radius: 0 25px 25px 0;
-}
-
-.category{
-  display: flex;
-  width: 80%;
-  padding: 15px;
-  justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  text-align: left;
+  margin-top: 100px;
+  overflow: hidden;
 }
-.category div {
+picture, picture img{
+  width: 300px;
+  object-fit: contain;
+}
+.content-div{
+  width: 300px;
+  height: 450px;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: hsl(0, 0%, 100%);
+  gap: 10px;
+  padding-left: 30px;
 }
-.category p{
-  color: hsla(224, 30%, 27%, 0.5);
-  font-weight: 700;
+h4{
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
 }
-.category span{
-  font-weight: 800;
-  color: hsl(224, 30%, 27%);
+h1{
+  font-family: 'Fraunces', serif;
+  width: 80%;
 }
-.reaction {
-  background-color: hsla(0, 100%, 67%, 0.1);
+p:first-of-type{
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  width:80%
 }
-.reaction h4{
-  color: hsl(0, 100%, 67%);
+.price{
+  display: flex;
+  align-items: center;
 }
-.memory {
-  background-color: hsla(39, 100%, 56%, 0.1);
+h2{
+  color: hsl(158, 36%, 37%);
+  font-family: 'Fraunces', serif;
+  margin-right: 20px;
+  font-size: 32px;
 }
-.memory h4{
-  color: hsl(39, 100%, 56%)
-}
-.verbal {
-  background-color: hsla(166, 100%, 37%, 0.1);
-}
-.verbal h4{
-  color: hsl(166, 100%, 37%);
-}
-.visual {
-  background-color: hsla(234, 85%, 45%, 0.1);
-}
-.visual h4{
-  color: hsl(234, 85%, 45%);
+.price p{
+  text-decoration: line-through;
+  font-size: 13px;
 }
 button{
-  width: 87%;
+  width:80%;
   height: 40px;
-  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: hsl(158, 36%, 37%);
   border: 0;
-  background-color: hsl(224, 30%, 27%);
+  border-radius: 8px;
   color: hsl(0, 0%, 100%);
-  font-size: 15px;
-}
-button:focus{
-  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 button:hover{
-  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   cursor: pointer;
+}
+button:hover, button:focus{
+  background-color: hsl(158, 37%, 17%);
+}
+
+@media screen and (max-width:630px) {
+  main{
+    width: 100vw;
+    height: 100%;
+    margin: 10px;
+    gap: 0;
+  }
+  picture, picture img, .content-div{
+    width: 100%;
+  }
 }
